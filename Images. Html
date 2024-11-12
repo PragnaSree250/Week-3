@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Places in Rajasthan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #d62828;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        .place {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: fadeIn 3s ease-in-out forwards;
+            opacity: 0; /* Initial opacity for fade effect */
+        }
+
+        /* Fading animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Gradient overlay */
+        .place::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+        }
+
+        .place h2 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 1.5em;
+            z-index: 1;
+        }
+
+        /* Staggered animation delays */
+        .place:nth-child(1) { animation-delay: 0s; }
+        .place:nth-child(2) { animation-delay: 0.5s; }
+        .place:nth-child(3) { animation-delay: 1s; }
+        .place:nth-child(4) { animation-delay: 1.5s; }
+        .place:nth-child(5) { animation-delay: 2s; }
+        .place:nth-child(6) { animation-delay: 2.5s; }
+        .place:nth-child(7) { animation-delay: 3s; }
+        .place:nth-child(8) { animation-delay: 3.5s; }
+        .place:nth-child(9) { animation-delay: 4s; }
+        .place:nth-child(10) { animation-delay: 4.5s; }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .place {
+                height: 250px;
+            }
+            .place h2 {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            .place {
+                height: 200px;
+            }
+            .place h2 {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>10 Famous Places in Rajasthan</h1>
+        <p>Discover the beautiful and historic places in the Land of Kings.</p>
+    </header>
+    <section class="gallery">
+        <div class="place" style="background-image: url('https://images.app.goo.gl/YFT5s6dgLzTrNJEy7');">
+            <h2>Jaipur</h2>
+        </div>
+        <div class="place" style="background-image: url('https://images.app.goo.gl/tFMt5Ugaxb34Y2dK9');">
+            <h2>Udaipur</h2>
+        </div>
+        <div class="place" style="background-image: url('https://images.app.goo.gl/P9P78QK2NZNP5b2C6');">
+            <h2>Jodhpur</h2>
+        </div>
+        <div class="place" style="background-image: url('https://images.app.goo.gl/vfdyVrqMPPQHgY8X8');">
+            <h2>Bikaner</h2>
+        </div>
+        <div class="place" style="background-image: url('https://images.app.goo.gl/XGhxcRpi54tgQ2LL6');">
+            <h2>Pushkar</h2>
+        </div>
+        <div class="place" style="background-image: url('https://images.app.goo.gl/h6pXDmfZ2txBdmP39');">
+            <h2>Mount Abu</h2>
+        </div>
+        <div class="place" style="background-image: url('https://images.app.goo.gl/ZJY1oWSGEUBFSKMz6');">
+            <h2>Chittorgarh</h2>
+        </div>
+        <div class="place" style="background-image: url('https://images.app.goo.gl/ryZp4stkAkYeGDAi9');">
+            <h2>Ajmer</h2>
+        </div>
+        <div class="place" style="background-image: url('https://images.app.goo.gl/FDAjbkyTiG8Tdthw8');">
+            <h2>Kumbhalgarh</h2>
+        </div>
+    </section>
+</body>
+</html>
